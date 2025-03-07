@@ -1,0 +1,310 @@
+#left {
+  width: 15%;
+  background-color: lightgray;
+  height: 100vh;
+}
+#left h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+#left .date-range {
+  display: flex;
+  justify-content: center;
+}
+#left .searches {
+  margin-top: 20px;
+}
+#left .searches .utl-search {
+  text-align: center;
+}
+#left .searches .barcode-search {
+  text-align: center;
+  margin-top: 20px;
+}
+#left .searches .material-search {
+  text-align: center;
+  margin-top: 20px;
+}
+#left .searches .firma-search {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#right {
+  width: 85%;
+  height: 93vh;
+}
+#right .right {
+  overflow: auto;
+  height: 100%;
+}
+#right .right .styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#right .right .styled-table thead {
+  background-color: deepskyblue;
+  font-weight: bold;
+  color: white;
+}
+#right .right .styled-table th,
+#right .right .styled-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#right .right .styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#right .right .styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: 0.3s;
+}
+#right .table-buttons #printTable {
+  border: none;
+  background-color: deepskyblue;
+  color: white;
+  padding: 6px 30px;
+  margin-top: 7px;
+  margin-left: 10px;
+  position: absolute;
+  right: 215px;
+}
+#right .table-buttons #addNewDisposal {
+  border: none;
+  background-color: deepskyblue;
+  color: white;
+  padding: 6px 30px;
+  margin-top: 7px;
+  margin-left: 10px;
+  position: absolute;
+  right: 20px;
+}
+
+.disposal-add-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.disposal-add-modal .disposal-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.disposal-add-modal .disposal-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.disposal-add-modal .warehouse-barcode {
+  display: flex;
+  gap: 10px;
+}
+.disposal-add-modal .warehouse-barcode .warehouse {
+  width: 50%;
+}
+.disposal-add-modal .warehouse-barcode .warehouse #warehouses {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-add-modal .warehouse-barcode .barcode {
+  width: 50%;
+}
+.disposal-add-modal .warehouse-barcode .barcode #barcodes {
+  width: 100%;
+  border: 1px solid black;
+  height: 25px;
+}
+.disposal-add-modal .count-disposal {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.disposal-add-modal .count-disposal .count {
+  width: 50%;
+}
+.disposal-add-modal .count-disposal .count #counts {
+  width: 100%;
+  height: 25px;
+  border: 1px solid black;
+}
+.disposal-add-modal .count-disposal .disposalCause {
+  width: 50%;
+}
+.disposal-add-modal .count-disposal .disposalCause #disposalsCauses {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-add-modal .firma-personal {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.disposal-add-modal .firma-personal .firma {
+  width: 50%;
+}
+.disposal-add-modal .firma-personal .firma #firmas {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-add-modal .firma-personal .personal {
+  width: 50%;
+}
+.disposal-add-modal .firma-personal .personal #personals {
+  width: 100%;
+  height: 25px;
+  border: 1px solid black;
+}
+.disposal-add-modal .executive {
+  width: 100%;
+  margin-top: 10px;
+}
+.disposal-add-modal .executive #executives {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-add-modal .note {
+  width: 100%;
+  margin-top: 10px;
+}
+.disposal-add-modal .note #notes {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-add-modal #addDisposal {
+  background-color: deepskyblue;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  padding: 8px 40px;
+  margin-top: 10px;
+}
+
+.disposal-update-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.disposal-update-modal .disposal-update-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.disposal-update-modal .disposal-update-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.disposal-update-modal .warehouse-barcode-update {
+  display: flex;
+  gap: 10px;
+}
+.disposal-update-modal .warehouse-barcode-update .warehouse-update {
+  width: 50%;
+}
+.disposal-update-modal .warehouse-barcode-update .warehouse-update #warehouses-update {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-update-modal .warehouse-barcode-update .barcode-update {
+  width: 50%;
+}
+.disposal-update-modal .warehouse-barcode-update .barcode-update #barcodes-update {
+  width: 100%;
+  border: 1px solid black;
+  height: 25px;
+}
+.disposal-update-modal .count-disposal-update {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.disposal-update-modal .count-disposal-update .count-update {
+  width: 50%;
+}
+.disposal-update-modal .count-disposal-update .count-update #counts-update {
+  width: 100%;
+  height: 25px;
+  border: 1px solid black;
+}
+.disposal-update-modal .count-disposal-update .disposalCause-update {
+  width: 50%;
+}
+.disposal-update-modal .count-disposal-update .disposalCause-update #disposalsCauses-update {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-update-modal .firma-personal-update {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.disposal-update-modal .firma-personal-update .firma-update {
+  width: 50%;
+}
+.disposal-update-modal .firma-personal-update .firma-update #firmas-update {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-update-modal .firma-personal-update .personal-update {
+  width: 50%;
+}
+.disposal-update-modal .firma-personal-update .personal-update #personals-update {
+  width: 100%;
+  height: 25px;
+  border: 1px solid black;
+}
+.disposal-update-modal .executive-update {
+  width: 100%;
+  margin-top: 10px;
+}
+.disposal-update-modal .executive-update #executives-update {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-update-modal .note-update {
+  width: 100%;
+  margin-top: 10px;
+}
+.disposal-update-modal .note-update #notes-update {
+  width: 100%;
+  border: 1px solid black;
+}
+.disposal-update-modal #updateDisposal {
+  background-color: deepskyblue;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  padding: 8px 40px;
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
